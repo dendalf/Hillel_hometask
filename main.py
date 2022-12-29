@@ -4,9 +4,9 @@ import utils
 app = Flask(__name__)
 
 
-@app.route("/")
-def print_requirements():
-    return utils.read_file()
+@app.route("/avr_data")
+def get_avr_data():
+    return utils.calculate_data()
 
 
 app.run(debug=True)
